@@ -1,0 +1,39 @@
+import { useState, useEffect } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+
+function App() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Simulate loading time for smooth initial animation
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default App
+
