@@ -54,7 +54,7 @@ const About = () => {
             <motion.div
               variants={itemVariants}
               className="space-y-6"
-            >
+            > 
               <p className="text-lg text-gray-700 leading-relaxed">
                 I'm a passionate <span className="font-semibold text-primary-600">MERN Stack Developer</span> with
                 over <span className="font-semibold">2 years</span> of hands-on experience in building scalable web

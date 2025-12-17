@@ -123,7 +123,7 @@ const Hero = () => {
               <FaLinkedin />
             </motion.a>
             <motion.a
-              href="https://github.com"
+              href="https://github.com/GauravDhamankar"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl text-gray-700 hover:text-primary-600 transition-colors"

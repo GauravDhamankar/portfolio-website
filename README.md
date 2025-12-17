@@ -22,7 +22,7 @@ A modern, professional, and responsive portfolio website built with React.js, Ta
 
 1. **Clone the repository** (or navigate to the project directory):
    ```bash
-   cd doctorapp
+   cd portfolio
    ```
 
 2. **Install dependencies**:
@@ -59,7 +59,7 @@ npm run preview
 ## 📁 Project Structure
 
 ```
-doctorapp/
+portfolio/
 ├── public/              # Static assets
 ├── src/
 │   ├── components/      # React components
