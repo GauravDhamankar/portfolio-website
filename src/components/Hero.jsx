@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { HiDownload, HiMail } from 'react-icons/hi'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import resumePdf from '../assets/resume.pdf'
 
 const Hero = () => {
   const containerVariants = {
@@ -27,11 +28,12 @@ const Hero = () => {
   }
 
   const handleDownloadResume = () => {
-    // Replace with actual resume PDF path
     const link = document.createElement('a')
-    link.href = '../assets/resume.pdf' // Update this path
+    link.href = resumePdf
     link.download = 'Gaurav_Dhamankar_Resume.pdf'
+    document.body.appendChild(link)
     link.click()
+    document.body.removeChild(link)
   }
 
   const handleContactClick = () => {
