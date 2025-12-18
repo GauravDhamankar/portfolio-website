@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { HiDownload, HiMail } from 'react-icons/hi'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import resumePdf from '../assets/resume.pdf'
+import profileImage from '../assets/ProfilePhoto.jpg'
+
 
 const Hero = () => {
   const containerVariants = {
@@ -59,6 +61,12 @@ const Hero = () => {
             variants={itemVariants}
             className="mb-6"
           >
+            <motion.img
+              src={profileImage}
+              alt="Gaurav Dhamankar"
+              className="w-52 h-52 rounded-full object-cover mb-4 mx-auto"
+              variants={itemVariants}
+            />
             <motion.h1
               className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
@@ -136,7 +144,7 @@ const Hero = () => {
             </motion.a>
           </motion.div>
         </motion.div>
-      </div>                      
+      </div>
     </section>
   )
 }
