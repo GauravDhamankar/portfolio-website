@@ -89,14 +89,14 @@ const Contact = () => {
       ref={ref}
       className="section-padding bg-white"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-primary-600 mx-auto mb-4" />
@@ -105,7 +105,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -122,7 +122,7 @@ const Contact = () => {
                     <motion.a
                       key={index}
                       href={info.link || '#'}
-                      className="flex items-center gap-4 p-4 bg-primary-50 rounded-lg hover:bg-primary-100 transition-colors group"
+                      className="flex items-start gap-4 p-4 bg-primary-50 rounded-lg hover:bg-primary-100 transition-colors group"
                       whileHover={{ x: 5 }}
                       onClick={(e) => {
                         if (!info.link) e.preventDefault()
@@ -143,7 +143,7 @@ const Contact = () => {
 
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Social Links</h3>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon
                   return (
@@ -171,7 +171,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             onSubmit={handleSubmit}
-            className="bg-gradient-to-br from-primary-50 to-white p-8 rounded-xl shadow-lg"
+            className="bg-gradient-to-br from-primary-50 to-white p-6 sm:p-8 rounded-xl shadow-lg"
           >
             <div className="space-y-6">
               <div>
